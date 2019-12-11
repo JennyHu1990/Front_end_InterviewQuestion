@@ -234,11 +234,67 @@ Making your website behave consistently across browsers
 
 
 
-7. ### SEO Friendly
+### 7. SEO Friendly
 
-   - identify crawl error
-   - mobile-friendly
-   - secure with https
-   - check loading speed
-   - Chunk Your Content to Maximize Readability
-   - Use Schema Markup
+- identify crawl error
+- mobile-friendly
+- secure with https
+- check loading speed
+- Chunk Your Content to Maximize Readability
+- Use Schema Markup
+
+
+
+### 8. CSS flex box & grid
+
+##### 8.1 Concept: container and item; main axis(horizon) cross-axios
+
+container: 
+
+- flex- direction: follow the article tour,
+
+- flex-wrap: too large to display in one line
+- flex-flow, justify-content, align-items,align-content
+
+item:
+
+- order
+
+- flex-basis,flex-grow,flex-shrink,->combined in flex
+
+- algin-self
+
+##### 8.2 Grid
+
+define  columns and rows: grid-template-rows and grid-template-columns
+
+grid is a shorthand for grid-template-rows, column and areas
+
+##### 8.3 Difference
+
+Flex:One-dimensional space
+
+grid:Two-dimensional space
+
+
+
+### 9.CSS-in-JS
+
+##### CSS lack of modules
+
+##### Pros:
+
+- bundles JavaScript component
+- local scoping 
+- encapsulation
+- portability
+- reusability
+
+
+
+##### Cons
+
+- extra layer of complexity
+- code readability:generated selectors is hard to read
+- When:
+- A complex UX for a monolithic front-end

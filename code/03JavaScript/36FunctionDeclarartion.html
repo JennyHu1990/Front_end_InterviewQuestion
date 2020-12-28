@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    foo(); // 'FOOOOO'
+    function foo() {
+      console.log("FOOOOO");
+    }
+
+    function myFunc(theObject) {
+      theObject.make = "Toyota";
+    }
+
+    var mycar = { make: "Honda", model: "Accord", year: 1998 };
+    var x, y;
+
+    x = mycar.make; // x gets the value "Honda"
+    console.log(x);
+
+    myFunc(mycar);
+    y = mycar.make; // y gets the value "Toyota"
+    console.log(y);
+
+    function outside() {
+      var x = 5;
+      console.log(x);
+      function inside(x) {
+        console.log(x);
+        return x * 2;
+      }
+      return inside;
+    }
+
+    var a = outside()(10); // returns 20 instead of 10
+    console.log(a);
+  </script>
+</html>

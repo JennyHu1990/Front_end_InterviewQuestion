@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    var { a: aa = 10, b: bb = 5 } = { a: 3 };
+
+    console.log(aa); // 3
+    console.log(bb); // 5
+
+    var { c: cc = 30, d: dd = 40 } = { cc: 3 };
+
+    console.log(cc); // 33
+    console.log(dd); // 40
+  </script>
+</html>

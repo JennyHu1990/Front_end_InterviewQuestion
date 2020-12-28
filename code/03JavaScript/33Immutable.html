@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    var a = {
+      a: 1,
+      b: 2,
+      c: 3
+    };
+    var b = {
+      a: 1,
+      b: 2,
+      c: 3
+    };
+    var c = {
+      a: 1,
+      b: 2,
+      c: 3
+    };
+    var d = {
+      a: 1,
+      b: 2,
+      c: 3
+    };
+    Object.freeze(a);
+    Object.seal(b);
+    Object.preventExtensions(c);
+
+    a.d = "addNewValue";
+    b.d = "addNewValue";
+    c.d = "addNewValue";
+    d.d = "addNewValue";
+
+    delete a.b;
+    delete b.b;
+    delete c.b;
+    delete d.b;
+
+    a.a = "changevalueScuess";
+    b.a = "changevalueScuess";
+    c.a = "changevalueScuess";
+    d.a = "changevalueScuess";
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+
+    const human = Object.freeze({ race: "human" });
+    const john = { ...human, name: "John" }; // {race: "human", name: "John"}
+    const alienJohn = { ...john, race: "alien" }; // {race: "alien", name: "John"}
+    const humanJohn = { ...human, ...john };
+    console.log(human);
+    console.log(john);
+    console.log(alienJohn);
+    console.log(humanJohn);
+  </script>
+</html>

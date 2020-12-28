@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <body></body>
+  <script>
+    // var name = "The Window";
+
+    // var object = {
+    //   name: "My Object",
+
+    //   getNameFunc: function() {
+    //     var that = this;
+    //     return function() {
+    //       return that.name;
+    //     };
+    //   }
+    // };
+
+    // alert(object.getNameFunc()());
+
+    // function f1() {
+    //   n = 999;
+    //   alert(n);
+    // }
+    // f1();
+    // console.log(n);
+    // function f1() {
+    //   var n = 999;
+
+    //   function f2() {
+    //     alert(n);
+    //   }
+
+    //   return f2;
+    // }
+
+    // function f1() {
+    //   var n = 999;
+
+    //   nAdd = function() {
+    //     n += 1;
+    //   };
+
+    //   function f2() {
+    //     alert(n);
+    //   }
+
+    //   return f2;
+    // }
+
+    // var result = f1();
+
+    // result(); // 999
+
+    // nAdd();
+
+    // result(); // 1000
+    // var name = "The Window";
+
+    // var object = {
+    //   name: "My Object",
+
+    //   getNameFunc: function() {
+    //     var that = this;
+    //     return function() {
+    //       return that.name;
+    //     };
+    //   }
+    // };
+
+    // alert(object.getNameFunc()());
+
+    var Module = (function() {
+      var _private = "safe now";
+      var foo = function() {
+        console.log(_private);
+      };
+
+      return {
+        foo: foo
+      };
+    })();
+
+    Module.foo();
+    Module._private; // undefined
+    console.log(_private);
+  </script>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body></body>
+  <script>
+    function add(a, b) {
+      console.log("a:" + a);
+      console.log("b:" + b);
+      console.log("this:" + this);
+      return a + b;
+    }
+    console.log(add.call(null, 1, 2));
+    console.log(add.apply(null, [1, 2]));
+    console.log(add(1, 2));
+    console.log(add.call(1, 2));
+  </script>
+</html>

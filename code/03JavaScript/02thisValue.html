@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <body></body>
+  <script>
+    function person(name, age) {
+      var personObject = {};
+      personObject.name = name;
+      personObject.age = age;
+      return personObject;
+    }
+    var alex = person("Alx", 30);
+    console.log(alex);
+
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    var dave = new Person("dave", 11);
+    console.log(dave);
+
+    function Construtor() {
+      console.log(this);
+      this.value = 10;
+      console.log(this);
+    }
+    new Construtor();
+    var obj = {
+      value: 5,
+      printThis: function() {
+        console.log(this);
+      }
+    };
+    obj.printThis(); // -> { value: 5, printThis: ƒ }
+
+    function fn() {
+      console.log(this);
+    }
+    fn();
+  </script>
+</html>

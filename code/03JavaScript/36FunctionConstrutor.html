@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    var x = 10;
+
+    function createFunction1() {
+      var x = 20;
+      console.log(x);
+      return new Function("return x;"); // this |x| refers global |x|
+    }
+
+    var function1 = createFunction1();
+    console.log(function1());
+
+    function createFunction2() {
+      var x = 20;
+      function f() {
+        return x; // this |x| refers local |x| above
+      }
+      return f;
+    }
+
+    var function2 = createFunction2();
+    console.log(function2());
+  </script>
+</html>

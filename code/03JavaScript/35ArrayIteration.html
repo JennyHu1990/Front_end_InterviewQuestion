@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    var arr1 = [1, 2, 3, 4];
+    for (var i = 0; i < arr1.length; i++) {
+      console.log(arr1[i]);
+    }
+
+    var arr2 = ["a", "b", "c", "d"];
+    arr2.forEach(function(item) {
+      console.log(item);
+    });
+
+    var arr3 = [{ name: "aa" }, 2, "test"];
+    for (elemt of arr3) {
+      console.log(elemt);
+    }
+
+    var arr3 = [{ name: "bb" }, 5, "test"];
+    for ([index, item] of arr3.entries()) {
+      console.log(index, item);
+    }
+  </script>
+</html>
